@@ -46,6 +46,12 @@ public class MainActivity extends AppCompatActivity {
                 case "Real -> Dolar":
                     opcaoSelecionada = "BRL-USD";
                     break;
+                case "Real -> Yuan":
+                    opcaoSelecionada = "BRL-CNY";
+                    break;
+                case "Real -> Franco":
+                    opcaoSelecionada = "BRL-CHF";
+                    break;
                 default:
                     break;
             }
@@ -78,6 +84,12 @@ public class MainActivity extends AppCompatActivity {
                     JsonObject jsonObject = JsonParser.parseString(result).getAsJsonObject();
                     if (jsonObject.has("BRLUSD")) {
                         currencyRate = gson.fromJson(jsonObject.get("BRLUSD"), CurrencyRate.class);
+
+                    } else if (jsonObject.has("BRLCNY")) {
+                            currencyRate = gson.fromJson(jsonObject.get("BRLCNY"), CurrencyRate.class);
+
+                    } else if (jsonObject.has("BRLCHF")) {
+                        currencyRate = gson.fromJson(jsonObject.get("BRLCHF"), CurrencyRate.class);
                     } else {
                         Toast.makeText(getApplicationContext(), "Não foi possível encontrar o valor da moeda", Toast.LENGTH_SHORT).show();
                     }

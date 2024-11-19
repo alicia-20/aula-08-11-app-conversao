@@ -14,4 +14,25 @@
 ## Descritivo do Aluno:
 
 -> DESCREVA AQUI <-
+
+O aplictivo desenvolve um retorno ao usuário de valor da moeda selecionada (nesse caso de real 
+para Franco-moeda Suiça- e/ ou Yuan-moeda Chinesa-).
+Ultilizamos a função "CurrencyRate" que tem como característica retornar a taxa de conversão 
+para a moeda corporativa referente ao código ISO da moeda especificada.
+
+Ademais, também foi utilizada a função "jsonObject.has" que possibilita visualizar o nome do membro
+em referencia na consulta. Nesse caso, o sistema utilizado retorna ao usuario os códigos da moeda em questão 
+unidos. 
+
+Na linha 100 é apresentado o seguinte código: " TextView resultado = findViewById(R.id.resultado);" que implica o retorno do sistema refernete a solicitação realizada
+pelo Usuario. Esse retorno trás ao contribuinte o resultado do pedido do valor em questão. 
+
+Nas linhas 93/94 temos também um "else":  } else { Toast.makeText(getApplicationContext(), 
+"Não foi possível encontrar o valor da moeda", Toast.LENGTH_SHORT).show(); que retorna ao usuário uma resposta de "não sert possível encontrar a moeda" pois 
+o registro da moeda está restrito apenas em dois
+
+
+
+
+
  
